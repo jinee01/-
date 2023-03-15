@@ -1,0 +1,14 @@
+jupyter notebook  
+
+python을 path로 지정
+cmd 
+cd Python38 
+pip install jupyter 
+jupyter notebook 
+jupyter notebook --generate-config 
+ctrl + f  (find) _dir 
+c:\workspace\
+ctrl + s (save)
+
+아나콘다. 한번에 모두 설치해주고 가상환경도 만들어 준다. 
+ 

@@ -1,0 +1,17 @@
+통계 학습 
+
+시각화 패키지 install 
+import matplotlib.pyplot as plt
+rand_norm = np.random.normal(0.,3., size=1000)
+count, bins , ignored = plt.hist(rand_norm, normed=False)
+
+
+
+데이터 사이언스 스쿨 and wikidocs
+numpy 
+
+
+주피터 컴퓨터
+!pip install matplotlib
+
+import matplotlib.pyplot as plt
