@@ -1,9 +1,64 @@
 git
 
 
-touch는 파일을 생성하는 코드 
+touch        # 파일을 생성하는 코드 
 
+git add .     #space 이후 점은 all 을 의미한다. 
+
+git status    #상태를 확인하는 코드 
+
+git commit -m '파일 명'    
+
+vim .gitignore  #올리고 싶지 않은 파일을 지정하는 코드 
+
+company project 는 init을 하면 안됨
+------------------------------------------
+#개인 프로젝트 
+git init
+touch a
+git add
+git status
+git commit -m '파일명'
+git remote add origin +'git project 주소'
+git remote -v
+git push origin master
+
+----------------------------------------------
+#branch 생성 방법
+파일생성
+cmd 
+생성된 파일로 cd 
+git clone + https://github.com/shinhc0508/Project.git(git project code 주소) (폴더명)
+cmd 끝
+파일 수정 후 저장
+git bash 열고 
 git add .
-space 이후 점은 all 을 의미한다. 
+안되면 아래 문구 copy paste
+git staus 확인
+git commit 까지
+git status 
+#branch 생성
+git checkout -b (branch명)
+git push origin (branch명)
+------------------------------
+#master: branch file 가져오는 방법
+git pull origin master
 
-git status 는 항상 해야 한다. 상태를 확인해야 함
+프로젝트 처음에만 git clone
+항상 git add
+      git commit -m '파일명'
+      git push origin
+      git pull orgin
+-----------------------------------------------
+#특정파일은 올리고 싶지 않을 때
+vim .gitignore
+i
+esc
+:wq
+------------------------------------------------
+# git bash에서 파일 내용 변경하기 
+vim +파일명
+i
+변경
+esc
+:wq
