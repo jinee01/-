@@ -1,0 +1,9 @@
+git
+
+
+touch는 파일을 생성하는 코드 
+
+git add .
+space 이후 점은 all 을 의미한다. 
+
+git status 는 항상 해야 한다. 상태를 확인해야 함
