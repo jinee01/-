@@ -1,0 +1,32 @@
+pandas 
+
+cmd  / pip install pandas
+jupyter / import pandas as pd 
+imort seaborn as sns
+--------------------------------------------------------------
+행 row ,axis=1
+열 column , axis=0
+
+-pandas class
+  series : 1차원 배열 형태(value+index) / dictionary (key,value)     a={ : } ->  pd.Series(a)
+  data frame : matrix 형태
+
+#원소를 선택하는 2가지 방식 
+ 1) 단일 원소 선택
+  1. print( a [index number])   -> value 값만 나온다.
+  2. print( a ['key name'])  
+  1.' print(a [ [ index number] ] ) value key 모두 나옴
+ 2) 다중 원소 선택
+  1. print ( a [ [ idn1 , idn2 ] ] ) #인덱스 안에 인덱스를 넣어 가져온다.
+  2. print ( a [ [ 'kn1' , 'kn2'] ] )
+
+#series는 numpy 1차원 배열로 변환된다.
+sr/100000
+numpy는 * + 연산이 가능하지만
+dic등등은 연산이 불가능 하기 때문에 numpy로 변경하여 연산해야 한다.
+
+shift +tap 어떤 함수 사용가능한지 볼 수 있다. 
+
+
+
+  1.
