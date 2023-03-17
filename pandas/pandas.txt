@@ -29,4 +29,7 @@ shift +tap 어떤 함수 사용가능한지 볼 수 있다.
 
 
 
-  1.
+ 인코딩 방식 
+pd.read_csv('파일명', encoding= )
+저장 
+to_csv

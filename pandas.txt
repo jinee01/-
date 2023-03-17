@@ -1,0 +1,66 @@
+pandas 
+
+cmd  / pip install pandas
+jupyter / import pandas as pd 
+imort seaborn as sns
+--------------------------------------------------------------
+행 row ,axis=1
+열 column , axis=0
+
+-pandas class
+  series : 1차원 배열 형태(value+index) / dictionary (key,value)     a={ : } ->  pd.Series(a)
+  data frame : matrix 형태
+
+#원소를 선택하는 2가지 방식 
+ 1) 단일 원소 선택
+  1. print( a [index number])   -> value 값만 나온다.
+  2. print( a ['key name'])  
+  1.' print(a [ [ index number] ] ) value key 모두 나옴
+ 2) 다중 원소 선택
+  1. print ( a [ [ idn1 , idn2 ] ] ) #인덱스 안에 인덱스를 넣어 가져온다.
+  2. print ( a [ [ 'kn1' , 'kn2'] ] )
+
+#series는 numpy 1차원 배열로 변환된다.
+sr/100000
+numpy는 * + 연산이 가능하지만
+dic등등은 연산이 불가능 하기 때문에 numpy로 변경하여 연산해야 한다.
+
+shift +tap 어떤 함수 사용가능한지 볼 수 있다. 
+
+
+
+  1.
+행가져오기 
+loc, iloc
+열 가져오기
+
+여러개 가져올 때는 [ [ ] ] list 두번 감싸주기 
+삭제하기 drop
+추가하기 
+
+2가지 방법 
+1. 인덱스 번호를 전부 쓰는 방법 
+!pip install openpyxl
+df1 = pd.read_excel('./남북한발전전력량.xlsx', engine='openpyxl')
+
+df5 = df5.reindex(index = ['James','maria','gildong','brian','alice',4])
+# concat iloc 로 여러개 데이터를 한번에 합칠 수 있다. 
+# 행 중간 삽입 concat함수 iloc
+pd.concat ([df.iloc[:n], 원하는 열])
+
+#데이터를 csv로 저장
+df.to_csv('./파일명.csv')
+
+# 데이터 저장 방법 
+writer= pd.ExcelWriter('./df_excelwriter.xlsx')
+df1.to_excel(writer,sheet_name = 'sheet1')
+df2.to_excel(writer,sheet_name = 'sheet2')
+writer.save()
+
+
+'c:/workspace/data1/sample.csv' 절대경로
+'./sample.csv' 상대경로
+'sample.csv' 상대경로
+'./data1/sample.csv' 절대경로 
+
+일반적 데이터는 모두 채워진 상태가 아니기 때문에 NaN , 0 채우는거 해야됨 

@@ -14,9 +14,9 @@ vim .gitignore  #올리고 싶지 않은 파일을 지정하는 코드
 company project 는 init을 하면 안됨
 ------------------------------------------
 #개인 프로젝트 
-git init
+git init  (맨처음에만)
 touch a
-git add
+git addg
 git status
 git commit -m '파일명'
 git remote add origin +'git project 주소'

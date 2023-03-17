@@ -1,0 +1,80 @@
+한글 폰트 설치 방법 
+
+Google colab(리눅스 기반)
+노트마다 매번 설치해줘야 한다. 
+!apt-get install -y fonts-nanum
+!fc-cache-fv
+!rm-rf ~/.cache/matplot.lib
+
+import matplot lib as mpl
+import matplotlib.pyplot as plt
+import matplotlib as mpl                        ( mpl은 -가 출력되지 않아 )
+mpl.rcParams['axes.unicode_minus] = False   ( 를 써줘야 한다.)
+plt.rc('font' , family='NanumBarunGothic')
+
+이후 런타임 다시 시작 
+jupyter notebook
+
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+from matplotlib import font_manager, rc
+import matplotlib as mpl
+mpl.rcParams['axes.unicode_minus']=False
+plt.rc('font',family = 'Malgun Gothic')
+--------------------------------------------
+plt.figure(figsize=(12,6))                                                #그림사이즈 세로 인치 
+plt.plot(sr_one.index, sr_one.values, marker='o', markersize=7)
+plt.title('서울 -> 경기 인구 이동',size=22)
+plt.xlabel( '기간',size=18)
+plt.xticks(size= 10, rotation=45)                                         #사이즈 #각도조절 
+plt.ylabel('인구 이동수',size=18)
+plt.ylim(5000,700000)                                                     #limit를 늘릴 수 있다. (최솟값, 최대값)
+plt.legend(fontsize = 15, labels=['서울 ->경기'],loc = 'upper left')      #범례 
+plt.annotate('인구이동증가(1970-1995)',                                   #텍스트 입력  
+             xy = (10,550000),                                            #텍스트 위치 기준점
+             rotation = 25,                                               #텍스트 회전각도
+             va='basseline',                                              #텍스트 상하 정렬
+             ha='center',                                                 #텍스트 좌우 정렬
+             fontsize=20)                                                 #텍스트 글자 크기 
+plt.show() #변경사항을 저장하고 그래프로 출력 
+
+plt.style.use('ggplot')
+fig = plt.figure(figsize= (20,10))
+ax1 = fig.add_subplot(2,2,1)
+ax2 = fig.add_subplot(2,2,2)
+ax3 = fig.add_subplot(2,2,3)
+ax4 = fig.add_subplot(2,2,4)
+
+
+ax1.plot(col_years, df4.loc['충청남도',:],marker= 'o', markerfacecolor='green',             
+       markersize=10,color='olive',linewidth=2,label='서울->충남')          #[행, 열전체]
+
+ax2.plot(col_years, df4.loc['경상북도',:],marker= 'o', markerfacecolor='skyblue',             
+       markersize=10,color='blue',linewidth=2,label='서울->경북') 
+
+ax3.plot(col_years, df4.loc['강원도',:],marker= 'o', markerfacecolor='red',             
+       markersize=10,color='magenta',linewidth=2,label='서울->강원') 
+
+ax4.plot(col_years, df4.loc['전라남도',:],marker= 'o', markerfacecolor='yellow',             
+       markersize=10,color='orange',linewidth=2,label='서울->전남') 
+
+ax1.legend(loc='best')
+ax2.legend(loc='best')
+ax3.legend(loc='best')
+ax4.legend(loc='best')
+ax1.set_xlabel('기간',size =12)
+ax2.set_xlabel('기간',size =12)
+ax3.set_xlabel('기간',size =12)
+ax4.set_xlabel('기간',size =12)
+ax1.set_ylabel('인구수',size =12)
+ax2.set_ylabel('인구수',size =12)
+ax3.set_ylabel('인구수',size =12)
+ax4.set_ylabel('인구수',size =12)
+ax1.set_xticklabels(col_years, rotation=90)
+ax2.set_xticklabels(col_years, rotation=90)
+ax3.set_xticklabels(col_years, rotation=90)
+ax4.set_xticklabels(col_years, rotation=90)
+plt.show()
+
+#색상에는 헥사코드가 있다. 
